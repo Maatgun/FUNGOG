@@ -22,28 +22,27 @@ const productsArticles = (products) => {
     `;
 };
 
+
 const renderProducts = (productsList) => {
- boxProducts.innerHTML += productsList.map(productsArticles).join("");
-};
-
-
-const lastProducts = () => {
-    return appState.productsIndex === appState.productsLimit;
-};
-
-const showOtherProducts = () => {
+    boxProducts.innerHTML = productsList.map(productsArticles).join("");
+  };
+  
+  const lastProducts = () => {
+    return appState.productsIndex === appState.productsLimit - 1;
+  };
+  
+  const showOtherProducts = () => {
     appState.productsIndex += 1;
     let { products, productsIndex } = appState;
     renderProducts(products[productsIndex]);
     if (lastProducts()) {
-      loadButton.classList.add("load");
+      loadButton.classList.add("hidden");
     }
   };
-
-
-const init = () => {
+  
+  const init = () => {
     renderProducts(appState.products[appState.productsIndex]);
     loadButton.addEventListener("click", showOtherProducts);
-};
-
-init();
+  };
+  
+  init();  
