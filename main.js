@@ -1,4 +1,5 @@
 const boxProducts = document.querySelector(".box-products");
+const loadButton = document.querySelector(".load");
 
 const productsArticles = (products) => {
     const {id, name, price, cardImg} = products;
@@ -7,7 +8,7 @@ const productsArticles = (products) => {
     <div class="products">
     <img src=${cardImg} alt="name">
     <h3>${name}</h3>
-    <p>${price}</p>
+    <p>$${price}</p>
     <button
        class="btn-add"
        data-id="${id}"
@@ -15,19 +16,34 @@ const productsArticles = (products) => {
        data-price="${price}"
        data-img="${cardImg}"
        >
-       Add
+       ADD TO CART
     </button>
 </div>
     `;
 };
 
 const renderProducts = (productsList) => {
- boxProducts.innerHTML = productsList.map(productsArticles).join("");
+ boxProducts.innerHTML += productsList.map(productsArticles).join("");
+};
+
+
+const lastProducts = () => {
+    return appState.productsIndex === appState.productsLimit -1;
+};
+
+const showOtherProducts = () => {
+    appState.productsIndex = 1;
+    let { products, productsIndex } = appState;
+    renderProducts(products[productsIndex]);
+    if (lastProducts()) {
+        loadButton.classList.add(".load");
+    }
 };
 
 
 const init = () => {
-    renderProducts(productsOrder);
+    renderProducts(appState.products[appState.productsIndex]);
+    loadButton.addEventListener("click", showOtherProducts);
 };
 
 init();

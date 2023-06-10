@@ -316,7 +316,7 @@ main{
     background-color: #45a049;
 }
 
-.btn-load {
+.load {
     background: none;
     border: 1px solid #4caf50;
     padding: 10px 35px;
@@ -325,6 +325,7 @@ main{
     cursor: pointer;
     align-items: center;
 }
+
 /*------ REGISTER ------*/
 
 
@@ -344,7 +345,7 @@ main{
     padding: 20px 30px;
 }
 
-h3 {
+.login h3 {
     text-align: center;
     color: #1a2537;
     font-size: 20px;
@@ -686,7 +687,10 @@ footer span{
         font-weight: 400;
         font-family: 'Poppins', sans-serif;
     }
+
 }
+
+
 
 @media (min-width:300px) {
     .navbar{
@@ -741,7 +745,8 @@ footer span{
         width: 20px;
     }
    
-    .banner img {
+    .banner img,
+    .banner-g {
         width: 100%;
         height: auto;
      }
@@ -750,78 +755,77 @@ footer span{
     .logo {
         height: 50%;
         transition: 2s;
-}
+        }
 
-    .banner-g {
-        width: 100%;
-         height: auto;
-}
-.info h2 {
+    .info h2 {
     font-size: 30px;
-}
+    }
 
-.text {
+    .text {
     display: flex;
     flex-direction: column;
     width: 40%;
-}
+    
+    }
 
-.text {
+    .text {
     font-size: 30px;
     font-weight: 300;
     font-family: 'Poppins', sans-serif;
-}
-.info {
+    }
+    
+    .info {
     display: flex;
     justify-content: center;
     gap:10px;
     margin-bottom: 50px;
     align-items: baseline;
-}
+    }
 
-.about-us-info h2 {
+        .about-us-info h2 {
     font-size: 20px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-}
+    }
 
-.about-us-info p {
+    .about-us-info p {
     font-size: 12px;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
-}
+    }
  
 
-.form {
+    .form {
     width: 80%;
     font-family: 'Poppins', sans-serif;
-}
+    }
 
-.form-group {
+    .form-group {
     margin-bottom: 10px;
-}
+    }
 
-.form-group label {
+    .form-group label {
     display: block;
     font-weight: bold;
-}
+    }
 
-.form-group input,
-.form-group textarea {
+    .form-group input,
+    .form-group textarea {
     width: 100%;
     padding: 5px;
    
-}
+    }
 
-.form-group textarea {
+    .form-group textarea {
     height: 100px;
-}
+    }
 
-.form-group button {
+    .form-group button {
     padding: 5px 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
-}
-}
+    }
+
+    }

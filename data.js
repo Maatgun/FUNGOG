@@ -38,7 +38,7 @@ const productsOrder = [
 {
     id: 7,
     name: "MANTIS",
-    price: 12.00,
+    price: 12,
     cardImg: "./assets/mantis.png",
 },
 {
@@ -61,3 +61,20 @@ const productsOrder = [
 },
 
 ];
+
+const articlesDivided = (size) => {
+    let productsList = [];
+    for (let i = 0; i < productsOrder.length; i += size) {
+        productsList.push(productsOrder.slice(i, i + size));
+        
+    }
+
+    return productsList;
+};
+
+const appState = {
+    products: articlesDivided(5),
+    productsIndex: 0,
+    productsLimit: articlesDivided(5).length,
+    activeFilter: null,
+};
