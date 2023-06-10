@@ -316,7 +316,7 @@ main{
     background-color: #45a049;
 }
 
-.load {
+.btn-load {
     background: none;
     border: 1px solid #4caf50;
     padding: 10px 35px;
@@ -698,6 +698,9 @@ footer span{
         flex-wrap: wrap;
     }
 
+    .hidden {
+        display: none;
+    }
 }
 
 

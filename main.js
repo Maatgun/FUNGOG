@@ -1,12 +1,12 @@
 const boxProducts = document.querySelector(".box-products");
-const loadButton = document.querySelector(".load");
+const loadButton = document.querySelector(".btn-load");
 
 const productsArticles = (products) => {
     const {id, name, price, cardImg} = products;
 
     return `
     <div class="products">
-    <img src=${cardImg} alt="name">
+    <img src=${cardImg} alt="${name}">
     <h3>${name}</h3>
     <p>$${price}</p>
     <button
@@ -23,8 +23,9 @@ const productsArticles = (products) => {
 };
 
 
+
 const renderProducts = (productsList) => {
-    boxProducts.innerHTML = productsList.map(productsArticles).join("");
+    boxProducts.innerHTML += productsList.map(productsArticles).join("");
   };
   
   const lastProducts = () => {
@@ -36,13 +37,16 @@ const renderProducts = (productsList) => {
     let { products, productsIndex } = appState;
     renderProducts(products[productsIndex]);
     if (lastProducts()) {
-      loadButton.classList.add("hidden");
+      loadButton.computedStyleMap.display("none");
     }
   };
   
   const init = () => {
     renderProducts(appState.products[appState.productsIndex]);
     loadButton.addEventListener("click", showOtherProducts);
+    if (lastProducts()) {
+      loadButton.classList.add("hidden");
+    }
   };
   
-  init();  
+  init();
