@@ -326,6 +326,10 @@ main{
     align-items: center;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 /*------ REGISTER ------*/
 
 

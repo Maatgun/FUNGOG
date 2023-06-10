@@ -22,8 +22,6 @@ const productsArticles = (products) => {
     `;
 };
 
-
-
 const renderProducts = (productsList) => {
     boxProducts.innerHTML += productsList.map(productsArticles).join("");
   };
@@ -34,19 +32,18 @@ const renderProducts = (productsList) => {
   
   const showOtherProducts = () => {
     appState.productsIndex += 1;
-    let { products, productsIndex } = appState;
+    const { products, productsIndex } = appState;
     renderProducts(products[productsIndex]);
-    if (lastProducts()) {
-      loadButton.computedStyleMap.display("none");
-    }
   };
   
   const init = () => {
     renderProducts(appState.products[appState.productsIndex]);
-    loadButton.addEventListener("click", showOtherProducts);
     if (lastProducts()) {
       loadButton.classList.add("hidden");
     }
   };
   
+  loadButton.addEventListener("click", showOtherProducts);
+  
   init();
+  
