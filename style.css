@@ -688,6 +688,16 @@ footer span{
         font-family: 'Poppins', sans-serif;
     }
 
+    .cart {
+        left: 0;
+        width: 100%;
+        border:  none;
+    }
+
+    .cart-item{
+        flex-wrap: wrap;
+    }
+
 }
 
 
@@ -765,7 +775,7 @@ footer span{
     display: flex;
     flex-direction: column;
     width: 40%;
-    
+
     }
 
     .text {

@@ -28,17 +28,17 @@ const renderProducts = (productsList) => {
 
 
 const lastProducts = () => {
-    return appState.productsIndex === appState.productsLimit -1;
+    return appState.productsIndex === appState.productsLimit;
 };
 
 const showOtherProducts = () => {
-    appState.productsIndex = 1;
+    appState.productsIndex += 1;
     let { products, productsIndex } = appState;
     renderProducts(products[productsIndex]);
     if (lastProducts()) {
-        loadButton.classList.add(".load");
+      loadButton.classList.add("load");
     }
-};
+  };
 
 
 const init = () => {
