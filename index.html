@@ -11,28 +11,29 @@
 
 <body>
     <header>
-        <img src="./assets/logo.png" alt="logo de Guardianes" class="logo">
+        <img src="./assets/logo.png" alt="logo de Guardianes" class="logo"/>
         <nav class="navbar">
-            <label for="menu-toggle" class="menu-label">
-                <img src="./assets/menu.png" alt="menu-burguer">
-            </label>
-            <input id="menu-toggle" type="checkbox" />
+            <div class="menu-label">
+                <img src="./assets/menu.png" alt="menu-burguer" class="menu-icon" />
+            </div>
+
             <ul class="navbar-list">
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="#product-container">FUNKO</a></li>
-                <li><a href="#about-us">ABOUT US</a></li>
-                <li><a href="#about-us">CONTACT</a></li>
-                <li><a href="./pages/login.html">LOGIN</a></li>
+                <li><a class="navbar-a" href="./index.html">HOME</a></li>
+                <li><a class="navbar-a" href="#product-container">FUNKO</a></li>
+                <li><a class="navbar-a" href="#about-us">ABOUT US</a></li>
+                <li><a class="navbar-a" href="#about-us">CONTACT</a></li>
+                <li><a class="navbar-a" href="./pages/login.html">LOGIN</a></li>
             </ul>
             
-            <label for="cart-toggle" class="cart-label">
+            <div class="cart-label">
             <img src="./assets/anadir-al-carrito.png" alt="Carrito de compras" class="cart-icon">
-            </label>
-            <input type="checkbox" id="cart-toggle"/>
-
-            <div class="cart">
+            <div class="cart-counter">0</div>
+            </div>
+ 
+             <div class="cart">
                 <h2>CART</h2>
-                <div class="cart-item">
+                <div class="cart-container">
+                <!-- <div class="cart-item">
                     <img src="./assets/baby-rocket.png" alt="">
                     <div class="item-info">
                         <h3 class="item-title">BABY ROCKET</h3>
@@ -43,115 +44,9 @@
                         <span class="item-quantity">1</span>
                         <span class="quantity-handler up">+</span>
                     </div>
+                </div> -->
                 </div>
-                <div class="cart-item">
-                    <img src="./assets/cosmo.png" alt="">
-                    <div class="item-info">
-                        <h3 class="item-title">COSMO</h3>
-                        <span class="item-price">Price: $12.00</span>
-                    </div>
-                    <div class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">1</span>
-                        <span class="quantity-handler up">+</span>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <img src="./assets/drax.png" alt="">
-                    <div class="item-info">
-                        <h3 class="item-title">DRAX</h3>
-                        <span class="item-price">Price: $12.00</span>
-                    </div>
-                    <div class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">1</span>
-                        <span class="quantity-handler up">+</span>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <img src="./assets/gamora.png" alt="">
-                    <div class="item-info">
-                        <h3 class="item-title">GAMORA</h3>
-                        <span class="item-price">Price: $12.00</span>
-                    </div>
-                    <div class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">1</span>
-                        <span class="quantity-handler up">+</span>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <img src="./assets/groot.png" alt="">
-                    <div class="item-info">
-                        <h3 class="item-title">GROOT</h3>
-                        <span class="item-price">Price: $12.00</span>
-                    </div>
-                    <div class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">1</span>
-                        <span class="quantity-handler up">+</span>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <img src="./assets/kraglin.png" alt="">
-                    <div class="item-info">
-                        <h3 class="item-title">KRAGLIN</h3>
-                        <span class="item-price">Price: $12.00</span>
-                    </div>
-                    <div class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">1</span>
-                        <span class="quantity-handler up">+</span>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <img src="./assets/mantis.png" alt="">
-                    <div class="item-info">
-                        <h3 class="item-title">MANTIS</h3>
-                        <span class="item-price">Price: $12.00</span>
-                    </div>
-                    <div class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">1</span>
-                        <span class="quantity-handler up">+</span>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <img src="./assets/rocket.png" alt="">
-                    <div class="item-info">
-                        <h3 class="item-title">ROCKET RACCON</h3>
-                        <span class="item-price">Price: $12.00</span>
-                    </div>
-                    <div class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">1</span>
-                        <span class="quantity-handler up">+</span>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <img src="./assets/nebula.png" alt="">
-                    <div class="item-info">
-                        <h3 class="item-title">NEBULA</h3>
-                        <span class="item-price">Price: $12.00</span>
-                    </div>
-                    <div class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">1</span>
-                        <span class="quantity-handler up">+</span>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <img src="./assets/starlord.png" alt="">
-                    <div class="item-info">
-                        <h3 class="item-title">STAR LORD</h3>
-                        <span class="item-price">Price: $12.00</span>
-                    </div>
-                    <div class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">1</span>
-                        <span class="quantity-handler up">+</span>
-                    </div>
-                </div>
+
 
                 <span class="divider"></span>
                 <div class="cart-total">
@@ -159,7 +54,10 @@
                     <span>$12.00</span>
                 </div>
                 <button class="btn-add">Pay</button>
+                <button class="btn-delete">Clean Cart</button>
             </div>
+
+            <div class="overlay"></div> 
         </nav>
     </header>
     <main>
@@ -185,76 +83,6 @@
 
         <section id="product-container">
             <div class="box-products">
-                <!-- <div class="products">
-                    <img src="./assets/baby-rocket.png" alt="Baby Rocket">
-                    <h3>BABY ROCKET</h3>
-                    <p>Price: $12.00</p>
-                    <button>ADD TO CART</button>
-                </div>
-
-                <div class="products">
-                    <img src="./assets/cosmo.png" alt="Baby Rocket">
-                    <h3>COSMO</h3>
-                    <p>Price: $12.00</p>
-                    <button>ADD TO CART</button>
-                </div>
-
-                <div class="products">
-                    <img src="./assets/drax.png" alt="Baby Rocket">
-                    <h3>DRAX</h3>
-                    <p>Price: $12.00</p>
-                    <button>ADD TO CART</button>
-                </div>
-
-                <div class="products">
-                    <img src="./assets/gamora.png" alt="Baby Rocket">
-                    <h3>GAMORA</h3>
-                    <p>Price: $12.00</p>
-                    <button>ADD TO CART</button>
-                </div>
-
-                <div class="products">
-                    <img src="./assets/groot.png" alt="Baby Rocket">
-                    <h3>GROOT</h3>
-                    <p>Price: $12.00</p>
-                    <button>ADD TO CART</button>
-                </div>
-
-                <div class="products">
-                    <img src="./assets/kraglin.png" alt="Baby Rocket">
-                    <h3>KRAGLIN</h3>
-                    <p>Price: $12.00</p>
-                    <button>ADD TO CART</button>
-                </div>
-
-                <div class="products">
-                    <img src="./assets/mantis.png" alt="Baby Rocket">
-                    <h3>MANTIS</h3>
-                    <p>Price: $12.00</p>
-                    <button>ADD TO CART</button>
-                </div>
-
-                <div class="products">
-                    <img src="./assets/rocket.png" alt="Baby Rocket">
-                    <h3>ROCKET RACCON</h3>
-                    <p>Price: $12.00</p>
-                    <button>ADD TO CART</button>
-                </div>
-
-                <div class="products">
-                    <img src="./assets/nebula.png" alt="Baby Rocket">
-                    <h3>NEBULA</h3>
-                    <p>Price: $12.00</p>
-                    <button>ADD TO CART</button>
-                </div>
-
-                <div class="products">
-                    <img src="./assets/starlord.png" alt="Baby Rocket">
-                    <h3>STAR LORD</h3>
-                    <p>Price: $12.00</p>
-                    <button>ADD TO CART</button>
-                </div>
-            </div>  --->
             </div> 
            <button class="btn-load">Ver Más</button>
             </section>
@@ -323,6 +151,7 @@
         </div>
         <p>© <span>Funko.</span> All rights reserved.</p>
     </footer>
+    <div class="add-modal"></div>
     <script src="./data.js"></script>
     <script src="./main.js"></script>
 </body>
