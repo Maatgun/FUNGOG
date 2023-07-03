@@ -114,9 +114,9 @@ const renderProducts = (productsList) => {
                         <span class="item-price">${price}</span>
                     </div>
                     <div class="item-handler">
-                        <span class="quantity-handler down" data-id "${id}">-</span>
+                        <span class="quantity-handler down" data-id="${id}">-</span>
                         <span class="item-quantity">${quantity}</span>
-                        <span class="quantity-handler up" data-id=${id}>+</span>
+                        <span class="quantity-handler up" data-id="${id}">+</span>
                     </div>
                 </div> 
     `
@@ -146,7 +146,7 @@ const renderProducts = (productsList) => {
     return {id, name, price, img};
   };
 
-  const OnecartProduct = (productsId) => {
+  const OneCartProduct = (productsId) => {
     return cart.find((item) => {
       return item.id === productsId;
     });
@@ -179,7 +179,7 @@ const renderProducts = (productsList) => {
   };
 
   const disabledBothBtn = (btn) => {
-    if(!cart.lenght) {
+    if (!cart.length) {
       btn.classList.add("disabled");
     }
     else {
@@ -209,7 +209,7 @@ const renderProducts = (productsList) => {
       return;
     }
     const products = createProductsOrder(e.target.dataset);
-    if (OnecartProduct (products.id)) {
+    if (OneCartProduct (products.id)) {
         addSomeProduct(products);
         successful("Your product was added successfully !");
     }
@@ -238,7 +238,6 @@ const renderProducts = (productsList) => {
     boxProducts.addEventListener("click", add);
     disabledBothBtn(payBtn);
     disabledBothBtn(deleteBtn);
-    renderCartCounter();
   };
 
 init ();
