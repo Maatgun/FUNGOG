@@ -24,7 +24,7 @@ const validateEmptyField = (message, e) => {
   }
 }
 
-const validateEmailFormat = e => {
+const validateEmailFormat = (e) => {
   const field = e.target;
   const fieldValue = e.target.value;
   const regex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
@@ -55,13 +55,17 @@ const saveDataToLocalStorage = () => {
     !emailField.classList.contains("invalid");
 
   if (isValid) {
-    // Guardar los datos en el localStorage
     localStorage.setItem("userName", userName);
     localStorage.setItem("password", password);
     localStorage.setItem("email", email);
-
-    window.location.href = "/pages/login.html";
   }
+
+    document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault(); 
+    
+    
+        window.location.href = "../pages/login.html";
+      });
 };
 
 const init = () => {

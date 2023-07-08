@@ -17,7 +17,7 @@ emailField.addEventListener("input", () => {
     localStorage.setItem("password", passwordField.value);
   });
 
-document.querySelector("form").addEventListener("submit", (e) => {
+document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault(); 
 
 

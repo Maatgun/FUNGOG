@@ -32,7 +32,7 @@ const productsArticles = (products) => {
        class="btn-add"
        data-id="${id}"
        data-name="${name}"
-       data-price="$${price}"
+       data-price="${price}"
        data-img="${cardImg}"
        >
        ADD TO CART
