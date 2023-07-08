@@ -11,39 +11,31 @@
 <body>
     <header>
         <img src="../assets/logo.png" alt="logo de Guardianes" class="logo">
-        <nav class="navbar">
-            <label for="menu-toggle" class="menu-label">
-                <img src="../assets/menu.png" alt="menu-burguer">
-            </label>
-            <input id="menu-toggle" type="checkbox" />
-            <ul class="navbar-list">
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="../index.html">FUNKO</a></li>
-                <li><a href="../index.html">ABOUT US</a></li>
-                <li><a href="../index.html">CONTACT</a></li>
-                <li><a href="./login.html">LOGIN</a></li>
-            </ul>
-           
-            <img src="../assets/anadir-al-carrito.png" alt="Carrito de compras" class="cart-icon">
-        </nav>
     </header>
 
     <main>
-        <section class="login">
-            <h3>LOG IN</h3>
-            <div class="input-container">
-                <div class="input-container">
-            <input type="text" placeholder="Email">
-                </div>
-                        <div class="input-container">
-                            <input type="password" placeholder="Password">
-                                </div>
-                                <input type="submit" value="LOG IN " class="button">
+        <div class="form-container">
+            <form class="form_register">
+                <p class="form-title">CREATE ACCOUNT</P>
+                <label class="input-container">
+                    Email:
+                    <input class="input" type="text" name="email" id="email">
+                    <span></span>
+                </label>
+                <br>
+                <label class="input-container">
+                    Password:
+                    <input class="input" type="password" name="password" id="password">
+                 <span></span>
+                </label>
+                
+                                <input type="submit" value="LOG IN " class="button_login">
                                 <p>are u new? <a class="link" href="./register.html">Sing up</a></p>
                                 <p><a class="link" href="../index.html">Back to HOME</a></p>
+            </form>
+        </div>         
             </div>
-                 
-            </section>
+        </form>
     </main>
     <footer>
         <div>
@@ -55,6 +47,6 @@
         </div>
         <p>© <span>Funko.</span> All rights reserved.</p>
     </footer>
-    <script src="../main.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

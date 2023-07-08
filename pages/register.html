@@ -13,35 +13,34 @@
        
     </header>
     <main>
-        <form class="form_register" id="register-form" novalidate>
-            <p class="form-title">CREATE ACCOUNT</p>
-                <div class="input-container">
-            <input type="text" placeholder="Name" id="name" autocomplete="off">
-                </div>
-                <small></small>
+        <div class="form-container">
+    <form class="form_register">
+        <p class="form-title">CREATE ACCOUNT</P>
+        <label class="input-container">
+            Full Name:
+            <input class="input" type="text" name="username" id="username">
+            <span></span>
+        </label>
+        <br><br>
 
-                <div class="input-container">
-                    <input type="text" placeholder="Last Name" id="lastName">
-                        </div>
-                        <small></small>    
-        
-                <div class="input-container">
-                    <input type="text" placeholder="Email" id="email">
-                        </div>
-                        <small></small>
-        
-                        <div class="input-container">
-                            <input type="password" placeholder="Password" id="password">
-                                </div>
-                                <small></small>
+        <label class="input-container">
+            Password:
+            <input class="input" type="contraseña" name="password" id="password">
+            <span></span>
+        </label>
+        <br><br>
 
-                                <input type="submit" value="CREATE ACCOUNT" class="button">
-                                <p>By registering, you agree to our Terms of Use and Privacy Policy.</p>
-                                <p>Have an Account? <a class="link" href="./login.html">Log in</a></p>
-            </div>
-        
-            
-        </form>
+        <label class="input-container">
+            Email:
+            <input class="input" type="email" name="email" id="email">
+         <span></span>
+        </label>
+        <br><br>
+        <input type="submit" value="CREATE ACCOUNT" class="button" id="submit-button">
+        <p>By registering, you agree to our Terms of Use and Privacy Policy.</p>
+        <p>Have an Account? <a class="link" href="./login.html">Log in</a></p>
+    </form>
+</div>
     </main>
     <footer>
         <div>

@@ -433,21 +433,21 @@ main{
 
 /*------ REGISTER ------*/
 
-
-
-.container{
-    width: 100%;
-    padding: 15px;
+.form-container {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
 }
 
 .form_register {
-    height: 440px;
+    width: 320px;
     background: rgba(248, 248, 246, 0.678);
-    margin-top: 90px;
+    margin-top: 92px;
     box-shadow: 7px 13px 37px #000;
-    padding: 20px 30px;
+    padding: 0px 30px;
     border-radius: 5px;
 }
+
 .form-title {
     text-align: center;
     color: #1a2537;
@@ -458,38 +458,18 @@ main{
 }
 
 .input {
-    font-size: 25px;
+    font-size: 10px;
     font-family: 'Poppins', sans-serif;
     padding: 5px;
 
 }
 
-.input-container{
-    margin-bottom: 10px;
+.input-container {
+    display: flex;
+    flex-direction: column;
+
 }
 
-.input-container.error {
-    border: 1px solid red;
-}
-
-.input-container.success input{
-    border: 1px solid #45a049;
-}
-
-.input-container small {
-    color: #dc3545;
-    max-width: 350px;
-    text-align: center;
-    display: none;
-}
-
-#form_error {
-    color: red;
-    font-size: 1rem;
-    margin: 8px 0px;
-    max-width: 350px;
-    text-align: center;
-}
 
 .button{
     border: none;
@@ -523,11 +503,20 @@ p{
     color: cadetblue;
 }
 
+.invalid {
+    border: solid 1px red;
+    box-shadow: 0 0 10px red;
+}
+.error {
+    color: rgb(248, 52, 52);
+    display: block;
+}
 /*------ LOGIN -------*/
 
-.login{
+.form_login{
     border-radius: 5px;
-    height: 320px;
+    width: 310px;
+    height: 340px;
     margin: 180px;
     margin-bottom: 11px;
     background: rgba(248, 248, 246, 0.678);
@@ -535,11 +524,27 @@ p{
     padding: 20px 30px;
 }
 
-.login h3 {
-text-align: center;
-    color: #1a2537;
+.input_login {
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+}
+
+
+.button_login{
+    border: none;
+    width: 100%;
+    margin:10px 0px;
+    color:#000;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button_login:hover{
+    background: cadetblue;
 }
 
 /*------- CONTACT ----*/
@@ -606,8 +611,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 footer a,
