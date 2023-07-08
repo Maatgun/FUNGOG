@@ -10,48 +10,38 @@
 <body>
     <header>
         <img src="../assets/logo.png" alt="logo de Guardianes" class="logo">
-        <nav class="navbar">
-            <label for="menu-toggle" class="menu-label">
-                <img src="../assets/menu.png" alt="menu-burguer">
-            </label>
-            <input id="menu-toggle" type="checkbox" />
-            <ul class="navbar-list">
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="../index.html">FUNKO</a></li>
-                <li><a href="../index.html">ABOUT US</a></li>
-                <li><a href="../index.html">CONTACT</a></li>
-                <li><a href="./login.html">LOGIN</a></li>
-            </ul>
-           
-            <img src="../assets/anadir-al-carrito.png" alt="Carrito de compras" class="cart-icon">
-        </nav>
+       
     </header>
     <main>
-        <section class="formulario">
-            <div class="box-form">
-            <h3>CREATE ACCOUNT</h3>
-            <div class="contenedor">
-                <div class="input-contenedor">
-            <input type="text" placeholder="First & Last Name" id="nameLastName">
+        <form class="form_register" id="register-form" novalidate>
+            <p class="form-title">CREATE ACCOUNT</p>
+                <div class="input-container">
+            <input type="text" placeholder="Name" id="name" autocomplete="off">
                 </div>
                 <small></small>
+
+                <div class="input-container">
+                    <input type="text" placeholder="Last Name" id="lastName">
+                        </div>
+                        <small></small>    
         
-                <div class="input-contenedor">
+                <div class="input-container">
                     <input type="text" placeholder="Email" id="email">
                         </div>
                         <small></small>
         
-                        <div class="input-contenedor">
+                        <div class="input-container">
                             <input type="password" placeholder="Password" id="password">
                                 </div>
                                 <small></small>
+
                                 <input type="submit" value="CREATE ACCOUNT" class="button">
                                 <p>By registering, you agree to our Terms of Use and Privacy Policy.</p>
                                 <p>Have an Account? <a class="link" href="./login.html">Log in</a></p>
             </div>
-            </div>
+        
             
-        </section>
+        </form>
     </main>
     <footer>
         <div>
@@ -63,6 +53,6 @@
         </div>
         <p>© <span>Funko.</span> All rights reserved.</p>
     </footer>
-    <script src="../main.js"></script>
+    <script src="./register.js"></script>
 </body>
 </html>

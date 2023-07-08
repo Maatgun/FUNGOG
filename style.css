@@ -133,7 +133,6 @@ header nav ul li:hover {
 .cart-item {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 30px;
     padding: 10px;
     border: 1px solid;
@@ -343,6 +342,35 @@ main{
     
 }
 
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+#products-categories h2 {
+    font-size: 30px;
+    margin: 60px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.category {
+    
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: rgba(173, 216, 230, 0.599);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+.active {
+    background: #ddd;
+}
+  
+
 #product-container {
     display: flex;
     flex-direction: column;
@@ -407,49 +435,55 @@ main{
 
 
 
-.contenedor{
+.container{
     width: 100%;
     padding: 15px;
 }
 
-.formulario {
-    width: 400px;
-    height: 400px;
+.form_register {
+    height: 440px;
     background: rgba(248, 248, 246, 0.678);
-    margin-top: 130px;
+    margin-top: 90px;
     box-shadow: 7px 13px 37px #000;
     padding: 20px 30px;
+    border-radius: 5px;
 }
-.formulario h3 {
+.form-title {
     text-align: center;
     color: #1a2537;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 800;
     font-family: 'Poppins', sans-serif;
 
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+.input {
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
     padding: 5px;
 
 }
 
-.input-contenedor{
+.input-container{
     margin-bottom: 10px;
 }
 
-.input-contenedor.error input {
+.input-container.error {
     border: 1px solid red;
 }
 
-.input-contenedor.success input {
+.input-container.success input{
     border: 1px solid #45a049;
 }
 
-.formulario_error {
+.input-container small {
+    color: #dc3545;
+    max-width: 350px;
+    text-align: center;
+    display: none;
+}
+
+#form_error {
     color: red;
     font-size: 1rem;
     margin: 8px 0px;
@@ -492,7 +526,7 @@ p{
 /*------ LOGIN -------*/
 
 .login{
-
+    border-radius: 5px;
     height: 320px;
     margin: 180px;
     margin-bottom: 11px;
@@ -655,22 +689,9 @@ footer span{
         display: none;
     }
 
-    .cart-counter {
-        position: absolute;
-        top: 12px;
-        right: 100px;
-        text-align: center;
-        background:#4CAF50;
-        color: #fff;
-        font-size: 10px;
-        font-weight: 500;
-        height: 18px;
-        width: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 1px;
-        border-radius: 50%;
+    .cart {
+        left: 0;
+        border: none;
     }
 
     .menu-label {
@@ -718,7 +739,7 @@ footer span{
  
 }
 
-@media (min-width:576px) {
+@media (max-width:576px) {
     header nav img{
         width: 55px;
         align-items: center;
@@ -746,6 +767,7 @@ footer span{
         width: 100%;
         height: auto;
     }
+
 
     .info h2 {
         font-size: 35px;
@@ -782,18 +804,24 @@ footer span{
         font-family: 'Poppins', sans-serif;
     }
 
-    .cart {
-        left: 0;
-        width: 100%;
-        border: none;
-    }
-
     .cart-item {
         flex-wrap: wrap;
     }
 
     .cart-item{
         flex-wrap: wrap;
+    }
+
+    #products-categories h2 {
+        font-size: 20px;
+        margin: 60px;
+        font-family: 'Poppins', sans-serif;
+        
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: column;
     }
 
     .hidden {
@@ -806,14 +834,6 @@ footer span{
 
     .navbar{
         gap:10px;
-    }
-
-    .cart {
-        min-width: unset;
-    }
-
-    .cart-container {
-        align-items: center;
     }
     .cart-icon{
         width: 50px;
@@ -876,7 +896,7 @@ footer span{
     align-items: baseline;
     }
 
-        .about-us-info h2 {
+    .about-us-info h2 {
     font-size: 20px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
@@ -887,39 +907,16 @@ footer span{
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
     }
- 
+    
+   .form_register {
+    width: 295px;
+   }
 
-    .form {
-    width: 80%;
+    input {
+    font-size: 18px;
     font-family: 'Poppins', sans-serif;
-    }
-
-    .form-group {
-    margin-bottom: 10px;
-    }
-
-    .form-group label {
-    display: block;
-    font-weight: bold;
-    }
-
-    .form-group input,
-    .form-group textarea {
-    width: 100%;
     padding: 5px;
-   
-    }
 
-    .form-group textarea {
-    height: 100px;
-    }
+}
 
-    .form-group button {
-    padding: 5px 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    }
-
-    }
+}
